@@ -10,4 +10,5 @@ dependencies = [
     "djangorestframework>=3.15.2",
     "strands-agents[gemini,openai]>=1.31.0",
     "strands-agents-tools>=0.2.23",
+    "django-cors-headers>=4.9.0",
 ]
