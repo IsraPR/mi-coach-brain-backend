@@ -24,6 +24,9 @@ env = environ.Env(DEBUG=(bool, False))
 environ.Env.read_env(BASE_DIR / ".env")
 SECRET_KEY = env("SECRET_KEY")
 DEBUG = env("DEBUG")
+# LLM model access
+GEMINI_API_KEY = env("GEMINI_API_KEY")
+GEMINI_MODEL_ID = env("GEMINI_MODEL_ID", default="gemini-2.5-flash")
 
 ALLOWED_HOSTS = []
 
@@ -39,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Third-party
     "rest_framework",
+    "brain",
 ]
 
 MIDDLEWARE = [
