@@ -55,5 +55,6 @@ class NextSteps(BaseModel):
 class CareerPathResponse(BaseModel):
     """The final structured output expected from the Strands Agent."""
 
+    message: str = "Career path generated successfully."
     career_map: CareerMap
     next_steps: NextSteps

@@ -46,3 +46,7 @@ class CareerPathRequestSerializer(serializers.Serializer):
     user_skills = SkillSerializer(many=True)
     feedback_360 = FeedbackSerializer(many=True)
     achievements = AchievementSerializer(many=True)
+    test_mode = serializers.BooleanField(
+        required=True,
+        help_text="If true, returns a mocked response instantly without calling the AI.",
+    )
