@@ -14,9 +14,9 @@ class StepSerializer(serializers.Serializer):
 
 
 class SkillSerializer(serializers.Serializer):
-    skill = serializers.CharField()
+    name = serializers.CharField()
     score = serializers.IntegerField(min_value=0, max_value=10)
-    type = serializers.CharField()
+    category = serializers.CharField()
 
 
 class FeedbackRequestedSerializer(serializers.Serializer):

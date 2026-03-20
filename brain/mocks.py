@@ -1,5 +1,3 @@
-# assistant/mocks.py
-
 MOCK_CAREER_PATH_RESPONSE = {
     "message": "Career path generated successfully (MOCKED when test_mode: true).",
     "career_map": {

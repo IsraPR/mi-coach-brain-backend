@@ -28,6 +28,10 @@ DEBUG = env("DEBUG")
 GEMINI_API_KEY = env("GEMINI_API_KEY")
 GEMINI_MODEL_ID = env("GEMINI_MODEL_ID", default="gemini-2.5-flash")
 
+OPENAI_API_KEY = env("OPENAI_API_KEY")
+OPENAI_MODEL_ID = env("OPENAI_MODEL_ID", default="gpt-4o")
+LLM_PROVIDER = env("LLM_PROVIDER", default="gemini")  # or "openai"
+
 ALLOWED_HOSTS = []
 
 
