@@ -96,6 +96,23 @@ class CareerMap(BaseModel):
     )
 
 
+class RoadmapItem(BaseModel):
+    """
+    One item in the roadmap — a specific, actionable step that the user can take.
+    Must be directly connected to insights and map nodes.
+    """
+
+    now: List[str] = Field(
+        description="2-4 specific, concrete actions the user can take immediately to make progress on the career map insights. Use exact wording from available steps when possible."
+    )
+    next: List[str] = Field(
+        description="2-4 specific next steps that logically follow this one, based on the career map dependencies and insights. Use the same format as 'now' for each item."
+    )
+    then: List[str] = Field(
+        description="2-4 specific steps for the medium term (3-6 months out)"
+    )
+
+
 class NextSteps(BaseModel):
     """
     Highly specific, actionable next steps for the user based on the CareerMap and available steps.
@@ -125,6 +142,9 @@ class NextSteps(BaseModel):
     can_wait: List[str] = Field(
         description="Important items / nodes / steps that can safely be postponed 3-9 months",
         default_factory=list,
+    )
+    roadmap: RoadmapItem = Field(
+        description="Roadmap of specific next steps for the next 6-12 months, broken down into 'now', 'next' and 'then' buckets."
     )
 
 
